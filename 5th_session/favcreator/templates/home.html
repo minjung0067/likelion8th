@@ -53,24 +53,23 @@
 
     <div class="container">
         {% if youtuber.channel_name == "티키틱 TIKITIK" %}
-        <iframe width="30%" height="300px" style="margin: 20px;" src="https://www.youtube.com/embed/aODhSiEI9qM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe width="30%" height="300px" style="margin: 20px;" src="https://www.youtube.com/embed/oE8eIggfXFs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe width="30%" height="300px" style="margin: 20px;" src="https://www.youtube.com/embed/Df1oAi3noIo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="30%" height="300px" style="margin: 20px;" src={{youtuber.link1}} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="30%" height="300px" style="margin: 20px;" src={{youtuber.link2}} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="30%" height="300px" style="margin: 20px;" src={{youtuber.link3}} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         {% endif %}
         {% if youtuber.channel_name == "이십세 상진" %}
-        <iframe width="30%" height="300px" style="margin: 20px;" src="https://www.youtube.com/embed/hRRjRehcA2M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe width="30%" height="300px" style="margin: 20px;" src="https://www.youtube.com/embed/Jseqs3Hdd8I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe width="30%" height="300px" style="margin: 20px;" src="https://www.youtube.com/embed/WC7fHcqOVJ8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="30%" height="300px" style="margin: 20px;" src={{youtuber.link1}} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="30%" height="300px" style="margin: 20px;" src={{youtuber.link2}} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="30%" height="300px" style="margin: 20px;" src={{youtuber.link3}} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         {% endif %}
         {% if youtuber.channel_name == "원지의 하루" %}
-        <iframe width="30%" height="300px" style="margin: 20px;" src="https://www.youtube.com/embed/siSguriYX2c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe width="30%" height="300px" style="margin: 20px;" src="https://www.youtube.com/embed/n319dMWew-c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe width="30%" height="300px" style="margin: 20px;" src="https://www.youtube.com/embed/D0PJB5Pd2Ss" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="30%" height="300px" style="margin: 20px;" src={{youtuber.link1}} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="30%" height="300px" style="margin: 20px;" src={{youtuber.link2}} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="30%" height="300px" style="margin: 20px;" src={{youtuber.link3}} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         {% endif %}
 
     
     </div>
-
 <br><br>
 
 {% endfor %}
