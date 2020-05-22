@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY FAVORITE CHANNEL</title>
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+</head>
+<body>
+<div class = "title">
+    <h3> ▷ MY FAVORITE YOUTUBE CHANNEL ◁ </h3>
+</div>
+{% for youtuber in youtubers.all %}
+<div class = "container">
+    <div class = "content">
+        <h1 style="border-style: double ; font-size: 30px; ">#{{youtuber.channel_name}}</h1>
+    </div>
+    <div class = "content">
+        <h1>#{{youtuber.creator_name}}</h2>
+    </div>
+    <div class= "content">
+        <h1 style="font-style: italic;">#{{youtuber.subscriber}} Subscribers </h1>
+    </div>
+            {% if youtuber.likes == 5 %}
+            <div class= "content" style="float: right;">
+                <h1 id ="likes">     # 선호도: ♥♥♥♥♥ </h1>
+            </div>
+
+            {% elif youtuber.likes == 4 %}
+            <div class= "content" style="float: right;">
+                <h1 id ="likes">    # 선호도: ♥♥♥♥ </h1>
+            </div>
+
+            {% elif youtuber.likes == 3 %}
+            <div class= "content" style="float: right;">
+                <h1 id ="likes">   # 선호도: ♥♥♥ </h1>
+            </div>
+            {% endif %}
+    <div class = "content">
+        {% if youtuber.onair == True %}
+            <div class = "onair" style="margin-right: 3px; ">
+                <h> On-Air</h>
+            </div>
+        {% else %}
+            <div class = "notonair">
+                <h> On-Air </h>
+            </div>
+    
+            {% endif %}  
+    </div>     
+    </div>
+
+    <div class="container">
+        {% if youtuber.channel_name == "티키틱 TIKITIK" %}
+        <iframe width="30%" height="300px" style="margin: 20px;" src="https://www.youtube.com/embed/aODhSiEI9qM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="30%" height="300px" style="margin: 20px;" src="https://www.youtube.com/embed/oE8eIggfXFs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="30%" height="300px" style="margin: 20px;" src="https://www.youtube.com/embed/Df1oAi3noIo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        {% endif %}
+        {% if youtuber.channel_name == "이십세 상진" %}
+        <iframe width="30%" height="300px" style="margin: 20px;" src="https://www.youtube.com/embed/hRRjRehcA2M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="30%" height="300px" style="margin: 20px;" src="https://www.youtube.com/embed/Jseqs3Hdd8I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="30%" height="300px" style="margin: 20px;" src="https://www.youtube.com/embed/WC7fHcqOVJ8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        {% endif %}
+        {% if youtuber.channel_name == "원지의 하루" %}
+        <iframe width="30%" height="300px" style="margin: 20px;" src="https://www.youtube.com/embed/siSguriYX2c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="30%" height="300px" style="margin: 20px;" src="https://www.youtube.com/embed/n319dMWew-c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="30%" height="300px" style="margin: 20px;" src="https://www.youtube.com/embed/D0PJB5Pd2Ss" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        {% endif %}
+
+    
+    </div>
+
+<br><br>
+
+{% endfor %}
+
+
+
+    
+</body>
+</html>
