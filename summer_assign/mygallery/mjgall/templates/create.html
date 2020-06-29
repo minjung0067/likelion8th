@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/main.css">
+</head>
+<body>
+    <div class="title"> <!--갤러리 타이틀-->
+        <h>*＊✿❀ JOLLY GALLERY ❀✿＊*</h>
+    </div>
+
+    <div class="profile">  <!--내 프로필-->
+        <img style="box-shadow: 8px 10px 7px #000; text-align: center; width: 200px; height: 200px; border-radius: 100%;" src="../media/image/프로필.jpg">
+    </div>
+
+    <div class="welcome">  <!--환영문구-->
+        <h>*⋆.*:･ﾟ .: ⋆*･ﾟ: .⋆   Add New Photo !  *⋆.*:･ﾟ .: ⋆*･ﾟ: .⋆ </h>
+    </div>
+
+    <div class="mygall">
+        <form action="{% url 'create' %}" enctype="multipart/form-data" method ="POST">
+            {% csrf_token %}
+            <p> # Photo_Name</p>
+            <textarea cols="30" rows="1"  name ="name"></textarea>
+            <p> # About_Photo  </p>
+            <textarea cols="40" rows="6" name="about"></textarea>
+            <p> # Upload_NEW_Photo</p>
+            {{form.pic}}
+            <input type="submit" value="Add" name = "submit" >
+        </form>
+
+    </div>
+</body>
+</html>

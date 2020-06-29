@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/main.css">
+</head>
+
+<body>
+
+    <div class="title"> <!--갤러리 타이틀-->
+        <h>*＊✿❀ JOLLY GALLERY ❀✿＊*</h>
+    </div>
+
+    <div class="profile">  <!--내 프로필-->
+        <img style="box-shadow: 8px 10px 7px #000; text-align: center; width: 200px; height: 200px; border-radius: 100%;" src="../media/image/프로필.jpg">
+    </div>
+
+    <div class="welcome">  <!--환영문구-->
+        <h> Welcome to JOLLY GALLERY .•♥ </h>
+
+    </div>
+
+    {% load static %}
+
+    <div class="outgall">
+    {% for i in photo_key.all %}
+
+        <div class="ingall">
+        {%if i.pic %}
+        <a href="#">
+            <img style="width: 350px; height:350px;  " src="{{i.pic.url}}" alt="Daim"/>
+            <span class="desc">
+                <p>{{i.about}}</p>                 
+            </span>
+            <span id="desc1">
+                <a href="{% url 'update' i.id %}">Modify</a>                
+                <a href="{% url 'delete' i.id %}">Delete</a>                 
+            </span>
+        </a>
+        </div>
+
+        {%endif%}
+        {% endfor %}
+    </div>
+    
+    <div style="height: 90%">
+    
+    </div> 
+
+    <div class="add">  <!--사진 추가, 스크롤 내리면 따라 다니게-->
+        <a href="{% url 'create'%}">NEW<br> PHOTO<br>•᎑•</a>
+    </div>
+
+</body>
+</html>
