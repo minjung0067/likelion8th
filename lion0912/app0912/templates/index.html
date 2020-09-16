@@ -1,0 +1,63 @@
+<!-- {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘의 영화인</title>
+    <link href="{% static 'CSS/index.css' %}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <img src="{% static 'IMG/film.png' %}" style="padding-top:5%" width="500px">
+            <h1>For the person who loves Film</h1>
+        </div>
+        <div class="aboutpage">
+            <h1> 오늘의 영화가 궁금하신가요?</h1>
+        </div>
+        <div class="todayDate">
+            <form name="todayDateForm" class="todayDateForm" action="http://127.0.0.1:8000/">
+                <input type="date" name="todayDateInput" min="2003-11-11" class="todayDateInput">
+                <input type="button" onclick="clickedSearchBtn();" value="찾기" class="todayDateInput"/>
+                <input type="button" onclick="reload()" value="페이지 비우기" class="todayDateInput"/>
+            </form>
+        </div>
+        <div class="contents">
+        </div>
+    </div>
+    <script src="{% static 'JS/index.js' %}" type="text/javascript"></script>
+</body>
+</html> -->
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today's Film</title>
+    <link href="{% static 'CSS/index.css' %}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <img src="{% static 'IMG/film.png' %}" style="padding-top:10%" width="500px" >
+            <h1>For the person who loves Film</h1>
+        </div>
+
+        <div class="todayDate">
+            <form name="todayDateForm" class="todayDateForm" action="http://127.0.0.1:8000/">
+                <input type="date" name="todayDateInput" min="2003-11-11" class="todayDateInput">
+                <input type="button" onclick="clickedSearchBtn();" value="CLICK" class="todayDateInput"/>
+                <input type="button" onclick="reload()" value="NEW DAY" class="todayDateInput"/>
+            </form>
+        </div>
+        <div class="contents">
+            <img src="{% static 'IMG/오만과편견.jpg'%}" alt="img" id="img" class="fadeIn"/>
+        </div>
+    </div>
+    <script src="{% static 'JS/index.js' %}" type="text/javascript"></script>
+</body>
+</html>
